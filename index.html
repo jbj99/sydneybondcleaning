@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bond Cleaning Sydney | Enquiries & Domain For Sale</title>
-<meta name="description" content="Looking for bond cleaning in Sydney? Submit an enquiry or purchase SydneyBondCleaning.com domain.">
+<title>Bond Cleaning Sydney | Free Quotes & Domain For Sale</title>
+<meta name="description" content="Get free bond cleaning quotes in Sydney or enquire about purchasing SydneyBondCleaning.com domain.">
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -48,15 +48,6 @@ body {
   color: #4da3ff;
 }
 
-.cta-btn {
-  margin-top: 20px;
-  background: #2f80ed;
-  color: white;
-  padding: 14px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
 /* RIGHT IMAGE */
 .hero-right {
   width: 50%;
@@ -65,7 +56,7 @@ body {
   position: relative;
 }
 
-/* TOP FORM (TENANT LEADS) */
+/* FORM BOX */
 .form-box {
   position: absolute;
   right: 40px;
@@ -74,7 +65,7 @@ body {
   background: white;
   padding: 25px;
   border-radius: 10px;
-  width: 320px;
+  width: 340px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
@@ -88,16 +79,44 @@ body {
   margin-bottom: 15px;
 }
 
+/* INPUT CONSISTENCY FIX */
 .form-box input,
-.form-box textarea {
+.form-box textarea,
+.offer-box input,
+.offer-box textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 6px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+  line-height: 1.5;
 }
 
-.form-box button {
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* TEXTAREA IMPROVEMENT */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+/* BUTTON */
+.form-box button,
+.offer-box button {
   width: 100%;
   padding: 12px;
   background: #2f80ed;
@@ -105,40 +124,24 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
 }
 
-/* SECTION */
+/* DOMAIN SECTION */
 .section {
   padding: 80px 40px;
   text-align: center;
+  background:#f7f9fc;
 }
 
-/* DOMAIN OFFER BOX */
+/* OFFER BOX */
 .offer-box {
   max-width: 420px;
   margin: 40px auto;
-  background: #111;
-  color: white;
+  background: white;
   padding: 30px;
-  border-radius: 10px;
-}
-
-.offer-box input,
-.offer-box textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-.offer-box button {
-  width: 100%;
-  padding: 12px;
-  background: #2f80ed;
-  border: none;
-  color: white;
-  border-radius: 6px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* MOBILE */
@@ -170,17 +173,28 @@ body {
 
   <div class="hero-right">
 
-    <!-- TENANT LEAD FORM -->
+    <!-- LEAD FORM -->
     <div class="form-box">
-      <h3>Get a Free Quote</h3>
-      <p>Enter your details and we’ll connect you with cleaners.</p>
+      <h3>Get My Free Quote</h3>
+      <p>Fill in your details and receive quotes from local cleaners.</p>
 
-      <form action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="hidden_iframe">
-        <input type="text" name="entry.1111111111" placeholder="Your Name" required>
-        <input type="email" name="entry.2222222222" placeholder="Your Email" required>
-        <input type="text" name="entry.3333333333" placeholder="Suburb / Location">
-        <textarea name="entry.4444444444" placeholder="Property details"></textarea>
-        <button type="submit">Get Quotes</button>
+      <form action="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMxrvpclvS5oZ1BsDLVVQmzhp-gwVeSn3-EP-JDMU4E_P56A/formResponse" method="POST" target="hidden_iframe">
+
+        <input type="text" name="entry.1111111111" placeholder="Full Name" required>
+        <input type="email" name="entry.2222222222" placeholder="Email Address" required>
+        <input type="tel" name="entry.3333333333" placeholder="Phone Number" required>
+
+        <input type="text" name="entry.4444444444" placeholder="Suburb" required>
+
+        <div class="grid">
+          <input type="number" name="entry.5555555555" placeholder="Bedrooms">
+          <input type="number" name="entry.6666666666" placeholder="Living Rooms">
+          <input type="number" name="entry.7777777777" placeholder="Bathrooms">
+        </div>
+
+        <textarea name="entry.8888888888" placeholder="Other property details (carpet, balcony, pets, condition)"></textarea>
+
+        <button type="submit">Get My Free Quote</button>
       </form>
 
       <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -192,21 +206,36 @@ body {
 
 <!-- DOMAIN SECTION -->
 <div class="section">
-  <h2>SydneyBondCleaning.com Domain For Sale</h2>
-  <p>
-    This premium exact-match domain is also available for acquisition. Ideal for cleaning businesses,
-    agencies, or lead generation companies targeting high-intent Sydney traffic.
+
+  <h2 style="font-size:32px; margin-bottom:15px;">
+    Own <span style="color:#2f80ed;">SydneyBondCleaning.com</span>
+  </h2>
+
+  <p style="color:#555; line-height:1.7; max-width:600px; margin:0 auto 30px;">
+    A premium exact-match domain targeting high-intent searches like 
+    <strong>bond cleaning Sydney</strong>, <strong>end of lease cleaning Sydney</strong>, 
+    and <strong>vacate cleaning Sydney</strong>.
   </p>
+
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-bottom:40px; font-size:14px;">
+    <div>✔ High intent traffic</div>
+    <div>✔ Strong SEO potential</div>
+    <div>✔ Trust & branding advantage</div>
+  </div>
 
   <div class="offer-box">
     <h3>Make an Offer</h3>
-    <p>Offers in the $400–$600 range considered.</p>
+    <p style="font-size:14px; color:#666; margin-bottom:15px;">
+      Offers in the $400–$600 range considered.
+    </p>
 
     <form action="https://docs.google.com/forms/d/e/FORM_ID_2/formResponse" method="POST" target="hidden_iframe">
-      <input type="text" name="entry.5555555555" placeholder="Your Name" required>
-      <input type="email" name="entry.6666666666" placeholder="Your Email" required>
-      <input type="text" name="entry.7777777777" placeholder="Your Offer (AUD)">
-      <textarea name="entry.8888888888" placeholder="Message"></textarea>
+
+      <input type="text" name="entry.9999999991" placeholder="Your Name" required>
+      <input type="email" name="entry.9999999992" placeholder="Your Email" required>
+      <input type="text" name="entry.9999999993" placeholder="Your Offer (AUD)">
+      <textarea name="entry.9999999994" placeholder="Message (optional)"></textarea>
+
       <button type="submit">Submit Offer</button>
     </form>
   </div>
