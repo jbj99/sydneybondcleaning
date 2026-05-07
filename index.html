@@ -423,50 +423,80 @@ textarea{
 
   <!-- OFFER BOX -->
 
-  <div class="offer-box">
+<div class="offer-box">
 
-    <h3>Make an Offer</h3>
+  <h3>Make an Offer</h3>
 
-    <p>
-      Serious enquiries only. Offers in the mid $500 range considered.
-    </p>
+  <p>
+    Serious enquiries only. Offers in the mid $500 range considered.
+  </p>
 
-    <form action="mailto:joel@thebrewspaper.com.au?subject=Domain%20Offer%20-%20SydneyBondCleaning.com"
-          method="POST"
-          enctype="text/plain">
+  <form 
+    action="https://docs.google.com/forms/d/e/1FAIpQLScR3fPiUfEuXTkFbo0XCwHZoIjQ_2GQL-qnJPZvgZhGjV-ZlA/formResponse" 
+    method="POST" 
+    target="offer_iframe"
 
-      <input 
-        type="text"
-        name="Name"
-        placeholder="Your Name"
-        required
-      >
+    onsubmit="
+      this.querySelector('button').innerText='Submitting...';
 
-      <input 
-        type="email"
-        name="Email"
-        placeholder="Your Email"
-        required
-      >
+      setTimeout(() => {
 
-      <input 
-        type="text"
-        name="Offer"
-        placeholder="Your Offer (AUD)"
-      >
+        document.getElementById('offer-success').style.display='block';
 
-      <textarea
-        name="Message"
-        placeholder="Message (optional)"
-      ></textarea>
+        this.reset();
 
-      <button type="submit">
-        Send Offer
-      </button>
+        this.querySelector('button').innerText='Submit Offer';
 
-    </form>
+      }, 800);
+    "
+  >
 
+    <input 
+      type="text"
+      name="entry.1460365462"
+      placeholder="Your Name"
+      required
+    >
+
+    <input 
+      type="email"
+      name="entry.1769054330"
+      placeholder="Your Email"
+      required
+    >
+
+    <input 
+      type="text"
+      name="entry.264488945"
+      placeholder="Your Offer (AUD)"
+    >
+
+    <textarea
+      name="entry.1904180677"
+      placeholder="Message (optional)"
+    ></textarea>
+
+    <button type="submit">
+      Submit Offer
+    </button>
+
+  </form>
+
+  <iframe name="offer_iframe" style="display:none;"></iframe>
+
+  <div id="offer-success" style="
+    display:none;
+    margin-top:15px;
+    padding:12px;
+    background:#e8f5e9;
+    color:#2e7d32;
+    border-radius:8px;
+    font-size:14px;
+  ">
+    ✅ Thanks! Your offer has been submitted.
   </div>
+
+</div>
 
 </div>
 
