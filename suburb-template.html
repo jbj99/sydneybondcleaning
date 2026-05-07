@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  SUBURB PAGE TEMPLATE — SydneyBondCleaning.com
+  ============================================================
+  HOW TO USE:
+  1. Duplicate this file and rename it, e.g. bond-cleaning-parramatta.html
+  2. Find & replace ALL instances of the following placeholders:
+       {{SUBURB}}        → e.g.  Parramatta
+       {{SUBURB_LOWER}}  → e.g.  parramatta
+       {{SUBURB_BLURB}}  → e.g.  a major commercial hub in Western Sydney
+  3. Save and deploy.
+
+  That's it — everything else fills in automatically.
+  ============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bond Cleaning {{SUBURB}} | Free Quotes | SydneyBondCleaning.com</title>
+<meta name="description" content="Looking for bond cleaning in {{SUBURB}}? Get free quotes from trusted end-of-lease cleaners. Fast, reliable service with a bond-back guarantee.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.sydneybondcleaning.com/bond-cleaning-{{SUBURB_LOWER}}" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧹</text></svg>">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWCP6W2KJX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWCP6W2KJX');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy:       #0b1724;
+  --navy-mid:   #162236;
+  --blue:       #2775e0;
+  --blue-hover: #1d65cc;
+  --blue-light: #5a9cf0;
+  --blue-pale:  #e8f1fd;
+  --off-white:  #f4f7fb;
+  --text-muted: #8a98aa;
+  --text-body:  #3a4756;
+  --border:     #dce4ef;
+  --radius:     12px;
+  --radius-lg:  18px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-body);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── NAV ─── */
+
+.nav {
+  background: var(--navy);
+  padding: 0 48px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-logo span { color: var(--blue-light); font-style: italic; }
+
+.nav-back {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+}
+
+.nav-back:hover { color: rgba(255,255,255,0.85); }
+.nav-back::before { content: '←'; font-size: 15px; }
+
+/* ─── HERO ─── */
+
+.hero {
+  display: flex;
+  min-height: 92vh;
+}
+
+.hero-left {
+  width: 52%;
+  background: var(--navy);
+  color: #fff;
+  padding: 80px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left::before {
+  content: '';
+  position: absolute;
+  top: -130px; left: -90px;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+.hero-left::after {
+  content: '';
+  position: absolute;
+  bottom: -90px; right: -70px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 1px;
+  background: var(--blue-light);
+}
+
+.hero-left h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 28px;
+  color: #fff;
+}
+
+.hero-left h1 em {
+  font-style: italic;
+  color: var(--blue-light);
+}
+
+.hero-left p {
+  color: rgba(255,255,255,0.52);
+  line-height: 1.85;
+  margin-bottom: 18px;
+  font-size: 15.5px;
+  font-weight: 300;
+  max-width: 400px;
+}
+
+.trust-badges {
+  display: flex;
+  gap: 22px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+
+.badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  flex-shrink: 0;
+}
+
+/* ─── RIGHT PANEL ─── */
+
+.hero-right {
+  width: 48%;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop') no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px;
+}
+
+.hero-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11,23,36,0.5) 0%, rgba(11,23,36,0.12) 100%);
+  pointer-events: none;
+}
+
+/* ─── FORM BOX ─── */
+
+.form-box {
+  position: relative;
+  background: #fff;
+  width: 372px;
+  padding: 32px 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 28px 64px rgba(0,0,0,0.24), 0 4px 16px rgba(0,0,0,0.06);
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 7px;
+}
+
+.form-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.form-box > p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* ─── INPUTS ─── */
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 10px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--navy);
+  background: #fff;
+  line-height: 1.5;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(39,117,224,0.1);
+}
+
+input::placeholder, textarea::placeholder { color: #b8c4cf; }
+textarea { resize: vertical; min-height: 80px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+/* ─── CONSENT ─── */
+
+.consent-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 2px 0 14px;
+}
+
+.consent-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin: 2px 0 0;
+  padding: 0;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+
+.consent-row label {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.consent-row label a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.consent-row label a:hover { text-decoration: underline; }
+
+/* ─── BUTTON ─── */
+
+.form-box button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.form-box button:hover { background: var(--blue-hover); }
+.form-box button:active { transform: scale(0.99); }
+
+.success-msg {
+  display: none;
+  margin-top: 14px;
+  padding: 11px 14px;
+  background: #edf7f0;
+  color: #1b7539;
+  border-radius: 8px;
+  font-size: 13.5px;
+  border: 1px solid #c2e8d0;
+}
+
+/* ─── CONTENT SECTION ─── */
+
+.content-section {
+  padding: 80px 30px;
+  background: #fff;
+}
+
+.content-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 24px; height: 1px;
+  background: var(--blue);
+}
+
+.content-inner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.content-inner p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--text-body);
+  margin-bottom: 16px;
+  max-width: 680px;
+}
+
+/* ─── SERVICES GRID ─── */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+}
+
+.service-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.service-card p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── FAQ SECTION ─── */
+
+.faq-section {
+  padding: 80px 30px;
+  background: var(--off-white);
+}
+
+.faq-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-inner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 36px;
+  line-height: 1.25;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-item h3 {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ─── CTA STRIP ─── */
+
+.cta-strip {
+  background: var(--navy);
+  padding: 64px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-strip::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+.cta-strip h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.cta-strip h2 em {
+  font-style: italic;
+  color: var(--blue-light);
+}
+
+.cta-strip p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.cta-btn:hover { background: var(--blue-hover); }
+.cta-btn:active { transform: scale(0.99); }
+
+/* ─── FOOTER ─── */
+
+.footer {
+  padding: 28px 30px;
+  background: var(--navy);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+}
+
+.footer a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+
+.footer a:hover { color: rgba(255,255,255,0.8); }
+
+/* ─── MOBILE ─── */
+
+@media (max-width: 900px) {
+  .nav { padding: 0 20px; }
+  .hero { flex-direction: column; }
+  .hero-left, .hero-right { width: 100%; }
+  .hero-left { padding: 60px 28px 52px; min-height: auto; }
+  .hero-left h1 { font-size: 36px; }
+  .hero-right { min-height: 540px; padding: 24px; justify-content: center; }
+  .form-box { width: 100%; max-width: 420px; }
+  .grid { grid-template-columns: 1fr; }
+  .content-section, .faq-section { padding: 56px 20px; }
+  .content-inner h2, .faq-inner h2 { font-size: 26px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .cta-strip { padding: 52px 20px; }
+  .cta-strip h2 { font-size: 26px; }
+}
+
+@media (max-width: 480px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-logo">Sydney<span>BondCleaning</span>.com</a>
+  <a href="/" class="nav-back">All suburbs</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+  <div class="hero-left">
+    <div class="eyebrow">{{SUBURB}}, Sydney</div>
+
+    <h1>Bond Cleaning<br>in <em>{{SUBURB}}</em></h1>
+
+    <p>Moving out of a rental in {{SUBURB}}? Get connected with experienced end-of-lease cleaners who know exactly what local property managers expect.</p>
+
+    <p>Fast quotes, reliable service, and a bond-back guarantee — all at no cost to you.</p>
+
+    <div class="trust-badges">
+      <div class="badge"><span class="badge-dot"></span>Free quotes</div>
+      <div class="badge"><span class="badge-dot"></span>Bond-back guarantee</div>
+      <div class="badge"><span class="badge-dot"></span>Same-week availability</div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="form-box">
+      <div class="form-label">Free Service — {{SUBURB}}</div>
+      <h3>Get My Free Quote</h3>
+      <p>Fill in your details and we'll connect you with trusted bond cleaners near {{SUBURB}}.</p>
+
+      <form
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdMxrvpclvS5oZ1BsDLVVQmzhp-gwVeSn3-EP-JDMU4E_P56A/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="
+          this.querySelector('button').innerText='Submitting…';
+          setTimeout(() => {
+            document.getElementById('success-message').style.display='block';
+            this.reset();
+            this.querySelector('button').innerText='Get My Free Quote';
+          }, 800);
+        "
+      >
+        <input type="text"  name="entry.236904965"  placeholder="Full Name"     required>
+        <input type="email" name="entry.268690044"  placeholder="Email Address" required>
+        <input type="tel"   name="entry.1301662876" placeholder="Phone Number"  required>
+
+        <!-- Suburb pre-filled — user can change if needed -->
+        <input type="text"  name="entry.1318756775" placeholder="Suburb" value="{{SUBURB}}">
+
+        <div class="grid">
+          <input type="text" name="entry.544559679" placeholder="Bedrooms">
+          <input type="text" name="entry.738114469" placeholder="Living Room">
+          <input type="text" name="entry.269677264" placeholder="Bathrooms">
+        </div>
+
+        <textarea name="entry.377423163" placeholder="Other details (pets, carpets, balcony, condition)"></textarea>
+
+        <div class="consent-row">
+          <input type="checkbox" id="consent-lead" required>
+          <label for="consent-lead">
+            I consent to my contact details and property information being shared with trusted third-party cleaning service providers for the purpose of receiving quotes. View our <a href="/privacy">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <button type="submit">Get My Free Quote</button>
+      </form>
+
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+      <div id="success-message" class="success-msg">✅ Thanks! You'll receive quotes from local {{SUBURB}} cleaners shortly.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTENT SECTION -->
+<div class="content-section">
+  <div class="content-inner">
+
+    <div class="section-eyebrow">End of Lease Cleaning</div>
+
+    <h2>Professional bond cleaning in {{SUBURB}}</h2>
+
+    <p>{{SUBURB}} is {{SUBURB_BLURB}}, and like all Sydney suburbs, rental properties here are expected to be returned to a professional standard at the end of a lease. Our network of vetted cleaners understands exactly what local property managers look for during final inspections.</p>
+
+    <p>Whether you're in a studio apartment or a large family home, we'll match you with the right cleaner based on your property size, location, and move-out date — completely free of charge.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>End of Lease Clean</h3>
+        <p>Full property deep clean to meet real estate inspection standards.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🧹</div>
+        <h3>Carpet Steam Cleaning</h3>
+        <p>Professional steam cleaning to remove stains, odours, and allergens.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🪟</div>
+        <h3>Window Cleaning</h3>
+        <p>Interior and exterior window cleaning for a spotless finish.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🐾</div>
+        <h3>Pest Control</h3>
+        <p>Required by many leases — especially if you had pets on the property.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🍳</div>
+        <h3>Oven & Appliances</h3>
+        <p>Degreasing and deep cleaning of ovens, rangehoods, and appliances.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛁</div>
+        <h3>Bathroom & Tile Cleaning</h3>
+        <p>Removal of soap scum, mould, and lime scale from all wet areas.</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- FAQ SECTION -->
+<div class="faq-section">
+  <div class="faq-inner">
+
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <h3>How much does bond cleaning cost in {{SUBURB}}?</h3>
+      <p>Prices vary depending on property size. A one-bedroom apartment typically costs $200–$280, while a three-bedroom house can range from $380–$550. Submit your details above for a free, tailored quote.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I get a bond-back guarantee?</h3>
+      <p>Yes. Our cleaning partners offer a re-clean guarantee — if your property manager identifies any issues within a set period after the clean, the cleaner will return to rectify them at no additional cost.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How far in advance should I book?</h3>
+      <p>We recommend booking at least 3–5 days before your move-out date. Many of our cleaners offer same-week availability, but earlier bookings give you more flexibility.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need to be present during the clean?</h3>
+      <p>No. Most tenants leave a key or arrange access and return once the clean is complete. Your cleaner will let you know when they're done.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is carpet steam cleaning included?</h3>
+      <p>Carpet steam cleaning is usually an add-on service. Many leases require it, especially if carpets were professionally cleaned at the start of your tenancy. Your quote will include pricing for this if needed.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <h2>Ready to book your<br><em>{{SUBURB}} bond clean?</em></h2>
+  <p>Get free quotes from trusted local cleaners — no obligation, takes 60 seconds.</p>
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;" class="cta-btn">Get My Free Quote ↑</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2026 SydneyBondCleaning.com &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a></p>
+</div>
+
+<!-- LocalBusiness + Service structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Bond Cleaning {{SUBURB}}",
+  "description": "End of lease and bond cleaning services in {{SUBURB}}, Sydney",
+  "url": "https://www.sydneybondcleaning.com/bond-cleaning-{{SUBURB_LOWER}}",
+  "areaServed": {
+    "@type": "Place",
+    "name": "{{SUBURB}}, Sydney, NSW, Australia"
+  },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Sydney Bond Cleaning",
+    "url": "https://www.sydneybondcleaning.com"
+  }
+}
+</script>
+
+</body>
+</html>
