@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.sydneybondcleaning.com/sitemap.xml
